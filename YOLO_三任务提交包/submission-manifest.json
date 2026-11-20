@@ -1,0 +1,335 @@
+{
+  "package": "YOLO 累積式大作業：三任務提交包",
+  "created_at": "2026-11-13T08:31:58.385407+00:00",
+  "file_count_excluding_manifest_and_checksums": 82,
+  "files": {
+    "01_任务一_文献综述/YOLO任务一_一页摘要.pdf": {
+      "bytes": 216414,
+      "sha256": "a1246e776daee3602ad991f3ce817d7cf9d64204ab47ea6eff0e8d755fd2da63"
+    },
+    "01_任务一_文献综述/YOLO任务一_完整报告.pdf": {
+      "bytes": 1762534,
+      "sha256": "109936fae4a1176b247535ebd02d1bf8bcbf83d417b2acb9afab575c29eb57e2"
+    },
+    "01_任务一_文献综述/YOLO任务一_提交版.pdf": {
+      "bytes": 892272,
+      "sha256": "e1d13b1e79c627a6d025f03ddda81a98589cee3be615d4247a1721e2742ec18b"
+    },
+    "01_任务一_文献综述/YOLO任务一_文献综述.md": {
+      "bytes": 13612,
+      "sha256": "2ad5f65ab42574d8c9242906003a17059b478bae81d601d62cbd3af61599a8a0"
+    },
+    "01_任务一_文献综述/YOLO任务一_知识图谱.pdf": {
+      "bytes": 671839,
+      "sha256": "0019866b42eb6293f710dae027e961c44f3b3c310394995bb95f12336390a2e5"
+    },
+    "01_任务一_文献综述/YOLO任务一_知识图谱.svg": {
+      "bytes": 28569,
+      "sha256": "c673e54d5cb310dd7d7781e80424093eff5bdba518c6a887b1acfe2ccbf6dd0d"
+    },
+    "02_任务二_技术复现/.gitignore": {
+      "bytes": 32,
+      "sha256": "4c206e794c6a46d48fb1d94e2208b0d2363e64fe4fcc7faf9b1473438fb7c22e"
+    },
+    "02_任务二_技术复现/LICENSE": {
+      "bytes": 1056,
+      "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685"
+    },
+    "02_任务二_技术复现/README.md": {
+      "bytes": 7096,
+      "sha256": "82b4586632ff250606c40f2c47436e925fc7b73d417bc2a3e4fb4c9167c847d6"
+    },
+    "02_任务二_技术复现/evaluate.py": {
+      "bytes": 6561,
+      "sha256": "37775ac0fbd1c7dbf8de7f35230ad501b2fe0e1e2850de02416d3556b609a8dd"
+    },
+    "02_任务二_技术复现/infer.py": {
+      "bytes": 2531,
+      "sha256": "b82043f680f2f3593761f666eeaf595a73c1db69b274aab5d8a134a01b34ceb7"
+    },
+    "02_任务二_技术复现/make_figures.py": {
+      "bytes": 8972,
+      "sha256": "fd77a6915b21ebb78211f2b56673005089289fc1b0cfcee865600bb18bcd3cec"
+    },
+    "02_任务二_技术复现/reports/复现报告.md": {
+      "bytes": 6792,
+      "sha256": "4d4feb5ea23a98f02bec8f48bc05fd2e9f856ec7ce5fdffabf11d535e14b9837"
+    },
+    "02_任务二_技术复现/reports/复现报告.pdf": {
+      "bytes": 2375380,
+      "sha256": "2ed313bf84e7c779f3400e080676ebd05511099a964c0567aa9cc41afb728078"
+    },
+    "02_任务二_技术复现/requirements.txt": {
+      "bytes": 36,
+      "sha256": "4ab860e5e09d2f908ca505d6a18b4db6d1d91d00a1f1688128f4d5898a51565b"
+    },
+    "02_任务二_技术复现/results/ablation.json": {
+      "bytes": 2077,
+      "sha256": "dee27f84c70118e6c08926415ddc5ae9ca9a55ad8e4cea5e3f9299136eeff59a"
+    },
+    "02_任务二_技术复现/results/best.pt": {
+      "bytes": 2446729,
+      "sha256": "63a91165c9f4c48d1a373996221b0e386f93e3c8587c7a290931ab39d93f1072"
+    },
+    "02_任务二_技术复现/results/best_stage1.pt": {
+      "bytes": 2446601,
+      "sha256": "8e15338c0e29e4fbc02853607d0f05b123c5e00bdcde840a782a3e8a6b55f286"
+    },
+    "02_任务二_技术复现/results/best_stage2.pt": {
+      "bytes": 2446665,
+      "sha256": "2ca65b4b8eaf0d6e0e1cc4001b6987056b36b4b0da1a014e93cba12394f0f36c"
+    },
+    "02_任务二_技术复现/results/best_stage3_strongneg.pt": {
+      "bytes": 2446729,
+      "sha256": "462169fc0433a2d35e05fc61a0acfdf1a12b49d198cffe01cfb7844e54ae32ec"
+    },
+    "02_任务二_技术复现/results/environment.json": {
+      "bytes": 85,
+      "sha256": "f4065aaebdd703226f4c72ed0c59a28fd2f984168bc5abadadd45f3ef9b90d4f"
+    },
+    "02_任务二_技术复现/results/inference_sample.png": {
+      "bytes": 49538,
+      "sha256": "67badaf9b2813d4b05faf5de3e1304454ed53cbbb1afa8bfd871255637da0642"
+    },
+    "02_任务二_技术复现/results/logs/final_evaluation.log": {
+      "bytes": 291,
+      "sha256": "c369b67b4dca429dd5c932e248f1c42c67270602d2c3224e7a05ca9e5010afee"
+    },
+    "02_任务二_技术复现/results/logs/stage1_training.log": {
+      "bytes": 3393,
+      "sha256": "746c503156109ae67451665c26b7749db574d2563d232b0425dfa0ab98a4e35b"
+    },
+    "02_任务二_技术复现/results/logs/stage2_finetune.log": {
+      "bytes": 1789,
+      "sha256": "fbab8bb02a19a0e4023c530fe1c7ee9a8824e6b70e6be3a2bb7ec14a37aae5e0"
+    },
+    "02_任务二_技术复现/results/logs/stage3_final_training.log": {
+      "bytes": 969,
+      "sha256": "c259e42d6fc11502debc2c7adb7de72c5d05eb39dae41955eb8b0523cdf948e5"
+    },
+    "02_任务二_技术复现/results/logs/stage3_strong_failure.log": {
+      "bytes": 1379,
+      "sha256": "fa4372d210e4470d92e3c38f4439fa11e010543c809d3360a38d418126973d3f"
+    },
+    "02_任务二_技术复现/results/metrics.csv": {
+      "bytes": 534,
+      "sha256": "e60f4683893aab74faad1a52784da8c204c4f0478b62ec714491c27bcf4e8145"
+    },
+    "02_任务二_技术复现/results/metrics.json": {
+      "bytes": 2124,
+      "sha256": "15e8225da69b6c995f78a8f166018136bf9e2466adf246f1af00b4bfd01ceab2"
+    },
+    "02_任务二_技术复现/results/predictions_val.pt": {
+      "bytes": 1151367,
+      "sha256": "4fd055aaa6487f8ac03b932f46c8765c0563b49ca99e14683e13faef827ac6d5"
+    },
+    "02_任务二_技术复现/results/screenshots/metrics_dashboard.png": {
+      "bytes": 40034,
+      "sha256": "d85c64b682fb8ccd02a7f2fa5e002e785fcfc878b09c14df87946d5fadcb0c67"
+    },
+    "02_任务二_技术复现/results/screenshots/qualitative_predictions.png": {
+      "bytes": 808640,
+      "sha256": "1ed19ee2fe46029c576c15eb70dba520d33d7cc819a1d66430c7664971d6183f"
+    },
+    "02_任务二_技术复现/results/screenshots/terminal_output.png": {
+      "bytes": 92196,
+      "sha256": "a7537a3cc192129099f36edee4abc760e6362b5633981f3114a9088830c0b21c"
+    },
+    "02_任务二_技术复现/results/screenshots/training_curves.png": {
+      "bytes": 39547,
+      "sha256": "39a26f6587ac968ec94cd74869833337b04b3611fe81547b489770f86306337d"
+    },
+    "02_任务二_技术复现/results/train_log.json": {
+      "bytes": 4958,
+      "sha256": "5d0f24096d9ea6b4eff731fd4a5403fff3dc543d494bc68021d877e4b82160a7"
+    },
+    "02_任务二_技术复现/results/train_log_stage1.json": {
+      "bytes": 17987,
+      "sha256": "667f3ba77baa472ee4a6220ed3c87b17ca4aa35d14140babba8fa69858b62eef"
+    },
+    "02_任务二_技术复现/results/train_log_stage2.json": {
+      "bytes": 9327,
+      "sha256": "49eb94858e76484e7482b3aeb620a2aa08444387e33410cbca283a99b3d0c28c"
+    },
+    "02_任务二_技术复现/results/train_log_stage3_strongneg.json": {
+      "bytes": 7159,
+      "sha256": "967975d6e4970fc60d5c9f5d36305f7289b06088279baab3ff98a898081b2a62"
+    },
+    "02_任务二_技术复现/results/training_log.txt": {
+      "bytes": 929,
+      "sha256": "46411b2183c89290400d92a49f290f2442ab359527d63fcd39c9d5412c4bc1f6"
+    },
+    "02_任务二_技术复现/scripts/run_all.sh": {
+      "bytes": 819,
+      "sha256": "f2e30010ae864fc59926df6a29bfe94232612b3905701d2082b9c595cf447886"
+    },
+    "02_任务二_技术复现/src/assigner.py": {
+      "bytes": 4280,
+      "sha256": "8694ca509b41dcd594a45fdf7bc0f8a46a22c2fe41710acd8bc7cc8779619745"
+    },
+    "02_任务二_技术复现/src/data.py": {
+      "bytes": 6405,
+      "sha256": "c05e0a67013fd49163cfb5a0cd59a9e218b49220b9209481c6514730fddc1abd"
+    },
+    "02_任务二_技术复现/src/loss.py": {
+      "bytes": 6077,
+      "sha256": "9b70da129bf8e7a3e9853c157d8ed82e478898e694ca9e1da28d867409dec4d5"
+    },
+    "02_任务二_技术复现/src/metrics.py": {
+      "bytes": 7613,
+      "sha256": "e2db208c91c0091dcbb76c5cd3b86d4df8f146dc73e84d158fc931a68e577d8d"
+    },
+    "02_任务二_技术复现/src/model.py": {
+      "bytes": 6112,
+      "sha256": "f07c740e24cc13a8138ff6ba5ab418eef4b43b89f76bebd8ef62061c1f1afc4c"
+    },
+    "02_任务二_技术复现/tests/test_core.py": {
+      "bytes": 2132,
+      "sha256": "f6382ed227915819cd914336f4d95ac3dcd29f5f613c2e06f17aa83e6d2db79b"
+    },
+    "02_任务二_技术复现/train.py": {
+      "bytes": 8229,
+      "sha256": "9872374c6a2059b9eff5ae8c6b04c58199bba519c24ebf7b12c7609ace28fa92"
+    },
+    "03_任务三_Agent工作/README.md": {
+      "bytes": 2026,
+      "sha256": "1109358f6422dc317ab8f0db9dad784c03470fbd00c50578c149e2b6db2a515d"
+    },
+    "03_任务三_Agent工作/agent.py": {
+      "bytes": 13445,
+      "sha256": "0a0eed051556b5732f607c4316543c156f3556e3149c2beeb91f00429c5b8501"
+    },
+    "03_任务三_Agent工作/analysis.md": {
+      "bytes": 3515,
+      "sha256": "3ac7d2c3913f8bca4edfb32df882c62d3f37375aa9add0fb367bf6d60408d14d"
+    },
+    "03_任务三_Agent工作/error-note.md": {
+      "bytes": 2146,
+      "sha256": "8864b2b7fbddec8372cf61ec679083a288ce08d4c141ee69fa004c9e29f8940b"
+    },
+    "03_任务三_Agent工作/evaluation.csv": {
+      "bytes": 306,
+      "sha256": "5d0254170005a8175e17db50b98d4c472882fabd16b00392074a748005c23a8b"
+    },
+    "03_任务三_Agent工作/final-brief.md": {
+      "bytes": 2895,
+      "sha256": "debcb12fcd75d73f07cbef4b2b63916d15e46b8f58831f17290db637c3c22f97"
+    },
+    "03_任务三_Agent工作/fixture/manifest.json": {
+      "bytes": 3227,
+      "sha256": "9982f7ef02d04e9f6a6f2a3a24c646d14a1dd9763c1ce2afee83574404d2cf4a"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S1_yolov1.md": {
+      "bytes": 789,
+      "sha256": "51700500de7ff0f248dcda0da48bb21068bd53c47b78174083fe03622c2ec4bd"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S2_yolov9.md": {
+      "bytes": 981,
+      "sha256": "6beb2504ab6f73c6661d5a017fa3d66e1211d478497457c3721d7dccf3044b16"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S3_yolov10.md": {
+      "bytes": 999,
+      "sha256": "cd1fb3349ef42027dde46fcbc7e341162cf796898f3f11b012b1cc30d975aef8"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S4_yolov7.md": {
+      "bytes": 710,
+      "sha256": "8bb38755006f902a7dee4ebd0a4b2334c58e24764d49e6ab7f1ebdd0d34f9f79"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S5_yolo_world.md": {
+      "bytes": 924,
+      "sha256": "38583276d5b2d8721055cddfe798255280b4ceccb53346a36bac59c93a7b5ab7"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S6_yolox.md": {
+      "bytes": 530,
+      "sha256": "8c63436e0c15d94f777273f8e6887774c31a04dd17ad29157a3d3add6fd2df54"
+    },
+    "03_任务三_Agent工作/fixture/source_pack/S7_yolov6.md": {
+      "bytes": 689,
+      "sha256": "b790a95371723e924a302ff67eb3da2f0c06d5b8406f95846216f73adf421436"
+    },
+    "03_任务三_Agent工作/provenance.json": {
+      "bytes": 3727,
+      "sha256": "f57cb7281147815d6f68e8d430d908952fe0602d5213959c3806355bd5ca1d3a"
+    },
+    "03_任务三_Agent工作/rubric.json": {
+      "bytes": 1141,
+      "sha256": "7a8b5c2e08972391d48b29c3e1a4f951791a79f0dc8e236b7df2ecb4345c742d"
+    },
+    "03_任务三_Agent工作/run_experiment.py": {
+      "bytes": 14257,
+      "sha256": "2883726da7d97b9e1c9934c6c6f22022e5a752b1d90f298b3ff0b175c92f8ecb"
+    },
+    "03_任务三_Agent工作/runs/max_steps_3/run-meta.json": {
+      "bytes": 461,
+      "sha256": "8e24a74deb9bf1f44fd2b5ee4a135f8c8974c5524f7f34d28c287b24c1b5b012"
+    },
+    "03_任务三_Agent工作/runs/max_steps_3/tool-results.jsonl": {
+      "bytes": 5000,
+      "sha256": "10cdce29f8eab9f005fb9f4f4f30fe111affae9e11cfd82f3ff8c355d35756d8"
+    },
+    "03_任务三_Agent工作/runs/max_steps_3/trajectory.jsonl": {
+      "bytes": 5330,
+      "sha256": "9ce68375658bfefc7c72ba4bcf3bb7f401885042b069d4294cd7681bd988cdce"
+    },
+    "03_任务三_Agent工作/runs/max_steps_3/validator-result.json": {
+      "bytes": 1506,
+      "sha256": "660970bbc797eae1bc49f8cf0a6e71ec3b021d89332e84b5ea0473d18c7e92c8"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/final-brief.md": {
+      "bytes": 2895,
+      "sha256": "debcb12fcd75d73f07cbef4b2b63916d15e46b8f58831f17290db637c3c22f97"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/run-meta.json": {
+      "bytes": 418,
+      "sha256": "661238555967d06b83a9928216758926dd9b2c07149d30d5b06f50c579189363"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/source-usage.json": {
+      "bytes": 772,
+      "sha256": "9d6b3b47b8735131073c59fc05fd2d9a4897f7df08f5354a6817cebd2235c351"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/tool-results.jsonl": {
+      "bytes": 11351,
+      "sha256": "af1b4b2e8bbe24efc72c1d49c4dd481dcba16c1828ee9f82960a00b0fcce04df"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/trajectory.jsonl": {
+      "bytes": 12041,
+      "sha256": "2b11dd01abdbfc5fa9968874aaae7bbe99b6cd1d198f1527817eca8d13c5d497"
+    },
+    "03_任务三_Agent工作/runs/max_steps_6/validator-result.json": {
+      "bytes": 1635,
+      "sha256": "f952fd45e49d81250e4a46764894adcc8b2b3ecd733c7ec505084511350b2d72"
+    },
+    "03_任务三_Agent工作/source-usage.json": {
+      "bytes": 772,
+      "sha256": "9d6b3b47b8735131073c59fc05fd2d9a4897f7df08f5354a6817cebd2235c351"
+    },
+    "03_任务三_Agent工作/task-contract.json": {
+      "bytes": 1694,
+      "sha256": "ee47d3d9ab844e5c163760bdecdfac49c85b4cc46d5884df3ce56b1cc916166c"
+    },
+    "03_任务三_Agent工作/tool-results.jsonl": {
+      "bytes": 11351,
+      "sha256": "af1b4b2e8bbe24efc72c1d49c4dd481dcba16c1828ee9f82960a00b0fcce04df"
+    },
+    "03_任务三_Agent工作/tool-schema.json": {
+      "bytes": 1810,
+      "sha256": "64b1dca7f9bf0d5a288bc9739a10fb484ead94a75cc4085093b9fa34d974e05f"
+    },
+    "03_任务三_Agent工作/trajectory.jsonl": {
+      "bytes": 12041,
+      "sha256": "2b11dd01abdbfc5fa9968874aaae7bbe99b6cd1d198f1527817eca8d13c5d497"
+    },
+    "03_任务三_Agent工作/validator-result.json": {
+      "bytes": 1635,
+      "sha256": "f952fd45e49d81250e4a46764894adcc8b2b3ecd733c7ec505084511350b2d72"
+    },
+    "03_任务三_Agent工作/validator.py": {
+      "bytes": 4527,
+      "sha256": "b0cc66be5a848ccc9ae1a56b28b70fcb8279ce912df771f412036490388a3c60"
+    },
+    "README_提交总览.md": {
+      "bytes": 2674,
+      "sha256": "9009e3196ffd0569849f7019edbbc8a3856c4d67e38885c30e2cec27bd91d22e"
+    }
+  }
+}

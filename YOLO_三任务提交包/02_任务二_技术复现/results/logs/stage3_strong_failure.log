@@ -1,0 +1,18 @@
+resumed from results/best_stage2.pt
+device=cpu | params=604,264 | train=768 | val=192 | epochs=15 | batch=32
+epoch 001/015 | train 1.8988 | val 2.3154 | o2m 0.5041 | o2o 0.5228 | lr 1.98e-04
+epoch 002/015 | train 1.5283 | val 2.1804 | o2m 0.4852 | o2o 0.4840 | lr 1.91e-04
+epoch 003/015 | train 1.4143 | val 2.1532 | o2m 0.4787 | o2o 0.4783 | lr 1.81e-04
+epoch 004/015 | train 1.3637 | val 2.1287 | o2m 0.4808 | o2o 0.4668 | lr 1.67e-04
+epoch 005/015 | train 1.3700 | val 2.1180 | o2m 0.4784 | o2o 0.4644 | lr 1.50e-04
+epoch 006/015 | train 1.3826 | val 2.1094 | o2m 0.4807 | o2o 0.4592 | lr 1.31e-04
+epoch 007/015 | train 1.3100 | val 2.2009 | o2m 0.4995 | o2o 0.4807 | lr 1.10e-04
+epoch 008/015 | train 1.2712 | val 2.0670 | o2m 0.4658 | o2o 0.4542 | lr 8.95e-05
+epoch 009/015 | train 1.2282 | val 2.1010 | o2m 0.4751 | o2o 0.4604 | lr 6.91e-05
+epoch 010/015 | train 1.2156 | val 2.0834 | o2m 0.4734 | o2o 0.4546 | lr 5.00e-05
+epoch 011/015 | train 1.1989 | val 2.0514 | o2m 0.4667 | o2o 0.4472 | lr 3.31e-05
+epoch 012/015 | train 1.1566 | val 2.0634 | o2m 0.4679 | o2o 0.4510 | lr 1.91e-05
+epoch 013/015 | train 1.1512 | val 2.0477 | o2m 0.4634 | o2o 0.4484 | lr 8.65e-06
+epoch 014/015 | train 1.1377 | val 2.0467 | o2m 0.4649 | o2o 0.4468 | lr 2.19e-06
+epoch 015/015 | train 1.0958 | val 2.0335 | o2m 0.4617 | o2o 0.4441 | lr 0.00e+00
+saved: results/best.pt | elapsed 155.2s

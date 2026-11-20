@@ -1,0 +1,6 @@
+{
+  "torch": "2.15.0",
+  "python": "3.12.14",
+  "device": "cpu",
+  "cpu_threads": 4
+}
