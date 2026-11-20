@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" font-family='Inter, "Noto Sans CJK TC", "Source Han Sans TC", "PingFang TC", "Microsoft JhengHei", Helvetica, Arial, sans-serif' text-rendering="geometricPrecision" xmlns:c2pa="http://c2pa.org/manifest">
+<title>YOLO：實時目標檢測的演進</title><defs>
+<marker id="m-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0E7C7B"/></marker>
+<marker id="m-org" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D76A2C"/></marker>
+<marker id="m-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2D5B9A"/></marker>
+<marker id="m-grn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3E7D4E"/></marker>
+</defs>
+<rect width="3840" height="2160" fill="#F7F4EC"/>
+<text x="80" y="114" font-size="104" font-weight="800" fill="#172A46" text-anchor="start">YOLO：實時目標檢測的演進</text>
+<text x="84" y="182" font-size="46" font-weight="500" fill="#5B6573" text-anchor="start">從單階段回歸到 NMS-free、開放詞彙與端到端部署</text>
+<rect x="3000" y="40" width="780" height="140" rx="24" fill="#FFFFFF" fill-opacity="0.6" stroke="#9AA7B5" stroke-width="2.5"/>
+<text x="3030" y="94" font-size="34" font-weight="700" fill="#172A46" text-anchor="start">5 篇核心會議論文 + 4 篇補充技術報告</text>
+<text x="3030" y="146" font-size="34" font-weight="700" fill="#172A46" text-anchor="start">3 篇 2024+ 頂會論文</text>
+<rect x="60" y="226" width="2880" height="360" rx="28" fill="#0E7C7B" fill-opacity="0.07" stroke="#0E7C7B" stroke-opacity="0.55" stroke-width="3"/>
+<circle cx="310" cy="278" r="32" fill="#0E7C7B"/>
+<text x="310" y="291" font-size="38" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="368" y="298" font-size="52" font-weight="800" fill="#0E7C7B" text-anchor="start">檢測範式</text>
+<text x="368" y="340" font-size="28" font-weight="500" fill="#5B6573" text-anchor="start">從單階段回歸到 NMS-free 端到端部署</text>
+<rect x="60" y="598" width="2880" height="360" rx="28" fill="#D76A2C" fill-opacity="0.07" stroke="#D76A2C" stroke-opacity="0.55" stroke-width="3"/>
+<circle cx="310" cy="650" r="32" fill="#D76A2C"/>
+<text x="310" y="663" font-size="38" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="368" y="670" font-size="52" font-weight="800" fill="#D76A2C" text-anchor="start">網絡與訓練</text>
+<text x="368" y="712" font-size="28" font-weight="500" fill="#5B6573" text-anchor="start">從手工模組組合到可訓練的梯度與信息流</text>
+<rect x="60" y="1192" width="2880" height="360" rx="28" fill="#2D5B9A" fill-opacity="0.07" stroke="#2D5B9A" stroke-opacity="0.55" stroke-width="3"/>
+<circle cx="310" cy="1244" r="32" fill="#2D5B9A"/>
+<text x="310" y="1257" font-size="38" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="368" y="1264" font-size="52" font-weight="800" fill="#2D5B9A" text-anchor="start">任務邊界</text>
+<text x="368" y="1306" font-size="28" font-weight="500" fill="#5B6573" text-anchor="start">從固定類別到開放詞彙檢測</text>
+<rect x="60" y="1564" width="2880" height="360" rx="28" fill="#3E7D4E" fill-opacity="0.07" stroke="#3E7D4E" stroke-opacity="0.55" stroke-width="3"/>
+<circle cx="310" cy="1616" r="32" fill="#3E7D4E"/>
+<text x="310" y="1629" font-size="38" font-weight="800" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="368" y="1636" font-size="52" font-weight="800" fill="#3E7D4E" text-anchor="start">評測與部署</text>
+<text x="368" y="1678" font-size="28" font-weight="500" fill="#5B6573" text-anchor="start">從只看 AP/FPS 到完整部署效率評估</text>
+<rect x="60" y="970" width="2880" height="210" rx="28" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA7B5" stroke-width="2.5"/>
+<line x1="80" y1="1075" x2="2920" y2="1075" stroke="#9AA7B5" stroke-width="6"/>
+<polygon points="381,1064 399,1075 381,1086" fill="#9AA7B5"/>
+<polygon points="701,1064 719,1075 701,1086" fill="#9AA7B5"/>
+<polygon points="1021,1064 1039,1075 1021,1086" fill="#9AA7B5"/>
+<polygon points="1341,1064 1359,1075 1341,1086" fill="#9AA7B5"/>
+<polygon points="1661,1064 1679,1075 1661,1086" fill="#9AA7B5"/>
+<polygon points="1981,1064 1999,1075 1981,1086" fill="#9AA7B5"/>
+<polygon points="2301,1064 2319,1075 2301,1086" fill="#9AA7B5"/>
+<polygon points="2621,1064 2639,1075 2621,1086" fill="#9AA7B5"/>
+<text x="90" y="1166" font-size="28" font-weight="500" fill="#5B6573" text-anchor="start">實線節點 = 正式會議論文；虛線節點 = 技術報告或工程脈絡</text>
+<line x1="230" y1="1017.0" x2="230" y2="566.0" stroke="#0E7C7B" stroke-width="3.5"/>
+<line x1="1190" y1="1017.0" x2="1190" y2="566.0" stroke="#0E7C7B" stroke-width="3.5" stroke-dasharray="12 9"/>
+<line x1="2470" y1="1043.0" x2="2470" y2="566.0" stroke="#0E7C7B" stroke-width="3.5"/>
+<line x1="550" y1="1025.0" x2="550" y2="932.0" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="12 9"/>
+<line x1="870" y1="1025.0" x2="870" y2="932.0" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="12 9"/>
+<line x1="1510" y1="1025.0" x2="1510" y2="932.0" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="12 9"/>
+<line x1="1830" y1="1025.0" x2="1830" y2="932.0" stroke="#D76A2C" stroke-width="3.5"/>
+<line x1="2150" y1="999.0" x2="2150" y2="932.0" stroke="#D76A2C" stroke-width="3.5"/>
+<path d="M2790 1107.0 V1248 H2440 V1322" fill="none" stroke="#2D5B9A" stroke-width="3.5"/>
+<line x1="386.0" y1="462" x2="1034.0" y2="462" stroke="#0E7C7B" stroke-width="6" marker-end="url(#m-teal)"/>
+<line x1="1346.0" y1="462" x2="2314.0" y2="462" stroke="#0E7C7B" stroke-width="6" marker-end="url(#m-teal)"/>
+<line x1="691.0" y1="834" x2="729.0" y2="834" stroke="#D76A2C" stroke-width="6" marker-end="url(#m-org)"/>
+<line x1="1011.0" y1="834" x2="1369.0" y2="834" stroke="#D76A2C" stroke-width="6" marker-end="url(#m-org)"/>
+<line x1="1651.0" y1="834" x2="1689.0" y2="834" stroke="#D76A2C" stroke-width="6" marker-end="url(#m-org)"/>
+<line x1="1971.0" y1="834" x2="2009.0" y2="834" stroke="#D76A2C" stroke-width="6" marker-end="url(#m-org)"/>
+<line x1="1971.0" y1="1428" x2="2269.0" y2="1428" stroke="#2D5B9A" stroke-width="6" marker-end="url(#m-blue)"/>
+<line x1="2611.0" y1="1428" x2="2659.0" y2="1428" stroke="#2D5B9A" stroke-width="6" marker-end="url(#m-blue)"/>
+<line x1="736.0" y1="1800" x2="804.0" y2="1800" stroke="#3E7D4E" stroke-width="6" marker-end="url(#m-grn)"/>
+<line x1="1456.0" y1="1800" x2="1524.0" y2="1800" stroke="#3E7D4E" stroke-width="6" marker-end="url(#m-grn)"/>
+<line x1="2176.0" y1="1800" x2="2244.0" y2="1800" stroke="#3E7D4E" stroke-width="6" marker-end="url(#m-grn)"/>
+<rect x="80.0" y="358.0" width="300" height="208" rx="22" fill="#FFFFFF" stroke="#0E7C7B" stroke-width="7"/>
+<text x="230" y="446.9" font-size="34" font-weight="800" fill="#172A46" text-anchor="middle">YOLOv1 [1]</text>
+<text x="230" y="496.0" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">單階段回歸</text>
+<rect x="1040.0" y="358.0" width="300" height="208" rx="22" fill="#FBF9F3" stroke="#0E7C7B" stroke-width="3.5" stroke-dasharray="16 10"/>
+<text x="1190" y="427.0" font-size="34" font-weight="600" fill="#172A46" text-anchor="middle">YOLOX [8]</text>
+<text x="1190" y="476.1" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">Anchor-free</text>
+<text x="1190" y="515.9" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">解耦頭 + SimOTA</text>
+<rect x="2320.0" y="358.0" width="300" height="208" rx="22" fill="#FFFFFF" stroke="#0E7C7B" stroke-width="7"/>
+<text x="2470" y="427.0" font-size="34" font-weight="800" fill="#172A46" text-anchor="middle">YOLOv10 [5]</text>
+<text x="2470" y="476.1" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">一致雙重分配</text>
+<text x="2470" y="515.9" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">NMS-free 推理</text>
+<rect x="415.0" y="736.0" width="270" height="196" rx="22" fill="#FBF9F3" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="16 10"/>
+<text x="550" y="819.6" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv3 [6]</text>
+<text x="550" y="866.3" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">多尺度預測</text>
+<rect x="735.0" y="736.0" width="270" height="196" rx="22" fill="#FBF9F3" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="16 10"/>
+<text x="870" y="801.1" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv4 [7]</text>
+<text x="870" y="847.8" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">CSP +</text>
+<text x="870" y="884.7" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">Bag-of-freebies</text>
+<rect x="1375.0" y="736.0" width="270" height="196" rx="22" fill="#FBF9F3" stroke="#D76A2C" stroke-width="3.5" stroke-dasharray="16 10"/>
+<text x="1510" y="819.6" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv6 [9]</text>
+<text x="1510" y="866.3" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">量化與工業部署</text>
+<rect x="1695.0" y="736.0" width="270" height="196" rx="22" fill="#FFFFFF" stroke="#D76A2C" stroke-width="6"/>
+<text x="1830" y="801.1" font-size="32" font-weight="800" fill="#172A46" text-anchor="middle">YOLOv7 [2]</text>
+<text x="1830" y="847.8" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">E-ELAN</text>
+<text x="1830" y="884.7" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">輔助頭 + 重參數化</text>
+<rect x="2015.0" y="736.0" width="270" height="196" rx="22" fill="#FFFFFF" stroke="#D76A2C" stroke-width="6"/>
+<text x="2150" y="801.1" font-size="32" font-weight="800" fill="#172A46" text-anchor="middle">YOLOv9 [3]</text>
+<text x="2150" y="847.8" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">PGI + GELAN</text>
+<text x="2150" y="884.7" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">改善梯度與信息流</text>
+<rect x="1695.0" y="1330.0" width="270" height="196" rx="22" fill="#2D5B9A" fill-opacity="0.11" stroke="#2D5B9A" stroke-width="3"/>
+<text x="1830" y="1414.0" font-size="34" font-weight="700" fill="#172A46" text-anchor="middle">閉集檢測</text>
+<text x="1830" y="1461.2" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">類別在訓練時固定</text>
+<rect x="2275.0" y="1324.0" width="330" height="208" rx="22" fill="#FFFFFF" stroke="#2D5B9A" stroke-width="7"/>
+<text x="2440" y="1393.0" font-size="34" font-weight="800" fill="#172A46" text-anchor="middle">YOLO-World [4]</text>
+<text x="2440" y="1442.1" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">RepVL-PAN</text>
+<text x="2440" y="1481.9" font-size="28" font-weight="500" fill="#5B6573" text-anchor="middle">區域-文本對比學習</text>
+<rect x="2665.0" y="1330.0" width="250" height="196" rx="22" fill="#2D5B9A" fill-opacity="0.11" stroke="#2D5B9A" stroke-width="3"/>
+<text x="2790" y="1395.6" font-size="34" font-weight="700" fill="#172A46" text-anchor="middle">開放詞彙</text>
+<text x="2790" y="1442.8" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">零樣本檢測</text>
+<text x="2790" y="1479.7" font-size="26" font-weight="500" fill="#5B6573" text-anchor="middle">下游微調</text>
+<rect x="90.0" y="1702.0" width="640" height="196" rx="22" fill="#3E7D4E" fill-opacity="0.11" stroke="#3E7D4E" stroke-width="3"/>
+<text x="410" y="1810.4" font-size="40" font-weight="700" fill="#172A46" text-anchor="middle">COCO AP / FPS</text>
+<rect x="810.0" y="1702.0" width="640" height="196" rx="22" fill="#3E7D4E" fill-opacity="0.11" stroke="#3E7D4E" stroke-width="3"/>
+<text x="1130" y="1810.4" font-size="40" font-weight="700" fill="#172A46" text-anchor="middle">Latency / Params / FLOPs</text>
+<rect x="1530.0" y="1702.0" width="640" height="196" rx="22" fill="#3E7D4E" fill-opacity="0.11" stroke="#3E7D4E" stroke-width="3"/>
+<text x="1850" y="1786.1" font-size="38" font-weight="700" fill="#172A46" text-anchor="middle">ONNX / TensorRT</text>
+<text x="1850" y="1833.6" font-size="38" font-weight="700" fill="#172A46" text-anchor="middle">量化 / 邊緣設備</text>
+<rect x="2250.0" y="1702.0" width="640" height="196" rx="22" fill="#3E7D4E" fill-opacity="0.24" stroke="#3E7D4E" stroke-width="9"/>
+<text x="2570" y="1810.4" font-size="40" font-weight="800" fill="#172A46" text-anchor="middle">同數據、同分辨率、同硬件</text>
+<rect x="85.0" y="1017.0" width="290" height="116" rx="24" fill="#172A46" stroke="#172A46" stroke-width="4"/>
+<text x="230" y="1061" font-size="28" font-weight="700" fill="#C5D0DE" text-anchor="middle">2016</text>
+<text x="230" y="1109" font-size="36" font-weight="800" fill="#FFFFFF" text-anchor="middle">YOLOv1 [1]</text>
+<rect x="415.0" y="1025.0" width="270" height="100" rx="24" fill="#F7F4EC" stroke="#5B6573" stroke-width="3.5" stroke-dasharray="14 9"/>
+<text x="550" y="1063" font-size="26" font-weight="700" fill="#5B6573" text-anchor="middle">2018</text>
+<text x="550" y="1105" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv3 [6]</text>
+<rect x="735.0" y="1025.0" width="270" height="100" rx="24" fill="#F7F4EC" stroke="#5B6573" stroke-width="3.5" stroke-dasharray="14 9"/>
+<text x="870" y="1063" font-size="26" font-weight="700" fill="#5B6573" text-anchor="middle">2020</text>
+<text x="870" y="1105" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv4 [7]</text>
+<rect x="1045.0" y="1017.0" width="290" height="116" rx="24" fill="#F7F4EC" stroke="#5B6573" stroke-width="3.5" stroke-dasharray="14 9"/>
+<text x="1190" y="1061" font-size="28" font-weight="700" fill="#5B6573" text-anchor="middle">2021</text>
+<text x="1190" y="1109" font-size="36" font-weight="800" fill="#172A46" text-anchor="middle">YOLOX [8]</text>
+<rect x="1375.0" y="1025.0" width="270" height="100" rx="24" fill="#F7F4EC" stroke="#5B6573" stroke-width="3.5" stroke-dasharray="14 9"/>
+<text x="1510" y="1063" font-size="26" font-weight="700" fill="#5B6573" text-anchor="middle">2022</text>
+<text x="1510" y="1105" font-size="32" font-weight="600" fill="#172A46" text-anchor="middle">YOLOv6 [9]</text>
+<rect x="1695.0" y="1025.0" width="270" height="100" rx="24" fill="#172A46" stroke="#172A46" stroke-width="4"/>
+<text x="1830" y="1063" font-size="26" font-weight="700" fill="#C5D0DE" text-anchor="middle">2023</text>
+<text x="1830" y="1105" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">YOLOv7 [2]</text>
+<rect x="2015.0" y="999.0" width="270" height="100" rx="24" fill="#172A46" stroke="#172A46" stroke-width="4"/>
+<text x="2150" y="1037" font-size="26" font-weight="700" fill="#C5D0DE" text-anchor="middle">2024</text>
+<text x="2150" y="1079" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">YOLOv9 [3]</text>
+<rect x="2325.0" y="1043.0" width="290" height="116" rx="24" fill="#172A46" stroke="#172A46" stroke-width="4"/>
+<text x="2470" y="1087" font-size="28" font-weight="700" fill="#C5D0DE" text-anchor="middle">2024</text>
+<text x="2470" y="1135" font-size="36" font-weight="800" fill="#FFFFFF" text-anchor="middle">YOLOv10 [5]</text>
+<rect x="2645.0" y="991.0" width="290" height="116" rx="24" fill="#172A46" stroke="#172A46" stroke-width="4"/>
+<text x="2790" y="1035" font-size="28" font-weight="700" fill="#C5D0DE" text-anchor="middle">2024</text>
+<text x="2790" y="1083" font-size="36" font-weight="800" fill="#FFFFFF" text-anchor="middle">YOLO-World [4]</text>
+<line x1="2970" y1="226" x2="2970" y2="1924" stroke="#9AA7B5" stroke-width="2.5" stroke-dasharray="3 12" stroke-linecap="round"/>
+<rect x="3000" y="226" width="780" height="1698" rx="28" fill="#A63D40" fill-opacity="0.04" stroke="#9AA7B5" stroke-width="2.5"/>
+<text x="3030" y="306" font-size="52" font-weight="800" fill="#A63D40" text-anchor="start">核心判斷與研究缺口</text>
+<rect x="3030" y="350" width="720" height="492" rx="22" fill="#FFFFFF" stroke="#A63D40" stroke-opacity="0.55" stroke-width="2.5"/>
+<rect x="3030" y="372" width="9" height="448" rx="4" fill="#A63D40"/>
+<text x="3066" y="430" font-size="46" font-weight="800" fill="#A63D40" text-anchor="start">版本號不等於創新量</text>
+<text x="3066" y="502" font-size="36" font-weight="400" fill="#172A46" text-anchor="start">真正的範式轉折主要集中在</text>
+<text x="3066" y="574" font-size="36" font-weight="400" fill="#172A46" text-anchor="start">YOLOv1、YOLOX、YOLOv10 與</text>
+<text x="3066" y="646" font-size="36" font-weight="400" fill="#172A46" text-anchor="start">YOLO-World。其餘版本更多是</text>
+<text x="3066" y="718" font-size="36" font-weight="400" fill="#172A46" text-anchor="start">骨幹網絡、neck、損失函數和</text>
+<text x="3066" y="790" font-size="36" font-weight="400" fill="#172A46" text-anchor="start">訓練策略的增量優化。</text>
+<rect x="3030" y="942" width="720" height="348" rx="22" fill="#FFFFFF" stroke="#A63D40" stroke-opacity="0.55" stroke-width="2.5"/>
+<rect x="3030" y="964" width="9" height="304" rx="4" fill="#A63D40"/>
+<text x="3066" y="1022" font-size="46" font-weight="800" fill="#A63D40" text-anchor="start">三條演進趨勢</text>
+<circle cx="3077" cy="1081" r="11" fill="#0E7C7B"/>
+<text x="3100" y="1094" font-size="36" font-weight="600" fill="#172A46" text-anchor="start">後處理：NMS → NMS-free</text>
+<circle cx="3077" cy="1153" r="11" fill="#2D5B9A"/>
+<text x="3100" y="1166" font-size="36" font-weight="600" fill="#172A46" text-anchor="start">任務：閉集 → 開放詞彙</text>
+<circle cx="3077" cy="1225" r="11" fill="#D76A2C"/>
+<text x="3100" y="1238" font-size="36" font-weight="600" fill="#172A46" text-anchor="start">架構：手工模組 → 可訓練的信息流</text>
+<rect x="3030" y="1390" width="720" height="420" rx="22" fill="#FFFFFF" stroke="#A63D40" stroke-opacity="0.55" stroke-width="2.5"/>
+<rect x="3030" y="1412" width="9" height="376" rx="4" fill="#A63D40"/>
+<text x="3066" y="1470" font-size="46" font-weight="800" fill="#A63D40" text-anchor="start">主要研究缺口</text>
+<circle cx="3075" cy="1529" r="8" fill="#A63D40"/>
+<text x="3100" y="1542" font-size="36" font-weight="500" fill="#172A46" text-anchor="start">COCO 與單一硬件偏置</text>
+<circle cx="3075" cy="1601" r="8" fill="#A63D40"/>
+<text x="3100" y="1614" font-size="36" font-weight="500" fill="#172A46" text-anchor="start">密集場景下的 NMS-free 穩定性</text>
+<circle cx="3075" cy="1673" r="8" fill="#A63D40"/>
+<text x="3100" y="1686" font-size="36" font-weight="500" fill="#172A46" text-anchor="start">開放詞彙的詞表與提示敏感性</text>
+<circle cx="3075" cy="1745" r="8" fill="#A63D40"/>
+<text x="3100" y="1758" font-size="36" font-weight="500" fill="#172A46" text-anchor="start">版本命名與可重現性不足</text>
+<rect x="60" y="1950" width="3720" height="190" rx="24" fill="#FFFFFF" fill-opacity="0.6" stroke="#9AA7B5" stroke-width="2.5"/>
+<rect x="92" y="1992" width="30" height="30" rx="7" fill="#172A46"/>
+<rect x="92" y="2066" width="30" height="30" rx="7" fill="none" stroke="#5B6573" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="150" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">核心會議文獻：</text>
+<text x="150" y="2098" font-size="30" font-weight="600" fill="#5B6573" text-anchor="start">補充技術報告：</text>
+<text x="450" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">[1] YOLOv1, CVPR 2016</text>
+<text x="1100" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">[2] YOLOv7, CVPR 2023</text>
+<text x="1750" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">[3] YOLOv9, ECCV 2024</text>
+<text x="2400" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">[4] YOLO-World, CVPR 2024</text>
+<text x="3050" y="2024" font-size="32" font-weight="800" fill="#172A46" text-anchor="start">[5] YOLOv10, NeurIPS 2024</text>
+<text x="450" y="2098" font-size="30" font-weight="500" fill="#5B6573" text-anchor="start">[6] YOLOv3, 2018</text>
+<text x="1100" y="2098" font-size="30" font-weight="500" fill="#5B6573" text-anchor="start">[7] YOLOv4, 2020</text>
+<text x="1750" y="2098" font-size="30" font-weight="500" fill="#5B6573" text-anchor="start">[8] YOLOX, 2021</text>
+<text x="2400" y="2098" font-size="30" font-weight="500" fill="#5B6573" text-anchor="start">[9] YOLOv6, 2022</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxMTI2M2Y3YS00ODIyLTQyZjEtOWE4MC02YjBiMGRiOTMxM2UAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaEtEYyujtJbacetfQ8esbDIAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0OWRjMGU3Zi1jODM1LTRjY2UtYmQ3NS0zMzNmZDQ1NDliM2FscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoEAhXcoO1a42Dua95bU1HcwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggsvI3KON4iLqUfdqSUpcR1jSOp+FPtYK/akvP/+Tx06ikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaERPzFj0JPQXj9PCHPiB2CIAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIJ6+np4R3vj5irn+3fScOdys6Wps8506ejHOnGCPcAK7ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GVF0Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjExMjYzZjdhLTQ4MjItNDJmMS05YTgwLTZiMGIwZGI5MzEzZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjY3Njk3MGZkLTI0ZGItNGNmMC1iYzQ5LTllMDY4ZjhhMmE0YXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCy8jco43iIupR92pJSlxHWNI6n4U+1gr9qS8//5PHTqKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggcEtaiwBvTkt9Fdv/Bj/bs5Y5omjmZ2UfJVh5UMjwxWOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggfVbJCQyNGr3i5amfen+orB0AyujiHP+Cvv7BvLxLtqV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPaCWgYf7HJ+iGGq0h3MhL2dXKNpfpstwmGpAqXaLVVhaNutantt87Z+18mUVcRWmsNFeOH5s9nyYuIOwuZwAyc=</c2pa:manifest></metadata></svg>

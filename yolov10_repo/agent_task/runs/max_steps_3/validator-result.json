@@ -1,0 +1,59 @@
+{
+  "validator": "local_final_state_validator_v1",
+  "run_dir": "/Users/chiyeepang/Documents/Codex/2026-11-20/zhe/work/yolov10_repo/agent_task/runs/max_steps_3",
+  "passed": false,
+  "checks": [
+    {
+      "name": "final_brief_exists",
+      "pass": false,
+      "detail": "/Users/chiyeepang/Documents/Codex/2026-11-20/zhe/work/yolov10_repo/agent_task/runs/max_steps_3/final-brief.md"
+    },
+    {
+      "name": "brief_length",
+      "pass": false,
+      "detail": "0 characters (expected 300-5000)"
+    },
+    {
+      "name": "citation_count",
+      "pass": false,
+      "detail": "found []"
+    },
+    {
+      "name": "citation_ids_valid",
+      "pass": false,
+      "detail": "valid_ids=['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7']"
+    },
+    {
+      "name": "required_topics_covered",
+      "pass": false,
+      "detail": "required=['S2', 'S3', 'S5'], found=[]"
+    },
+    {
+      "name": "no_placeholder_text",
+      "pass": true,
+      "detail": "checked TODO/TBD/PLACEHOLDER"
+    },
+    {
+      "name": "source_usage_provenance",
+      "pass": false,
+      "detail": "missing or malformed source-usage.json"
+    },
+    {
+      "name": "trajectory_present",
+      "pass": false,
+      "detail": "3 steps"
+    },
+    {
+      "name": "tool_results_present",
+      "pass": false,
+      "detail": "3 tool results"
+    },
+    {
+      "name": "required_tool_sequence",
+      "pass": false,
+      "detail": "tools=['search_sources', 'read_source', 'read_source']"
+    }
+  ],
+  "citation_ids": [],
+  "brief_chars": 0
+}

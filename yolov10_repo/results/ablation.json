@@ -1,0 +1,32 @@
+{
+  "purpose": "Training-stage ablation for the one-to-one NMS-free head. All values use the same 192-image validation split unless noted.",
+  "stages": [
+    {
+      "name": "stage1_base",
+      "description": "40 epochs, o2o loss weight 1.0, no duplicate-suppression term",
+      "o2o_nmsfree": {"mAP50": 0.8164, "mAP50_95": 0.6790, "precision": 0.4750, "recall": 0.9512, "latency_ms": 2.96},
+      "o2o_nms": {"mAP50": 0.9802, "mAP50_95": 0.7751, "precision": 0.9296, "recall": 0.9512, "latency_ms": 9.23},
+      "o2m_nms": {"mAP50": 0.9972, "mAP50_95": 0.8604, "precision": 0.8641, "recall": 0.9974, "latency_ms": 4.20}
+    },
+    {
+      "name": "stage2_stronger_o2o",
+      "description": "20 fine-tune epochs, o2o loss weight 2.5, no duplicate-suppression term",
+      "o2o_nmsfree": {"mAP50": 0.8972, "mAP50_95": 0.7697, "precision": 0.5000, "recall": 0.9820, "latency_ms": 6.12},
+      "o2o_nms": {"mAP50": 0.9928, "mAP50_95": 0.8198, "precision": 0.9573, "recall": 0.9794, "latency_ms": 3.49},
+      "o2m_nms": {"mAP50": 0.9974, "mAP50_95": 0.8625, "precision": 0.9129, "recall": 0.9974, "latency_ms": 3.70}
+    },
+    {
+      "name": "stage3_strong_neighbor_penalty",
+      "description": "15 fine-tune epochs, hard-negative weight 1.5; too strong and collapsed recall",
+      "o2o_nmsfree": {"mAP50": 0.4518, "mAP50_95": 0.3934, "precision": 1.0000, "recall": 0.0051, "latency_ms": 2.50}
+    },
+    {
+      "name": "stage3_soft_neighbor_penalty_final",
+      "description": "10 fine-tune epochs, o2o loss weight 2.5, hard-negative weight 0.1; final model",
+      "o2o_nmsfree": {"mAP50": 0.9065, "mAP50_95": 0.7775, "precision": 0.7824, "recall": 0.8226, "latency_ms": 3.56},
+      "o2o_nms": {"mAP50": 0.9944, "mAP50_95": 0.8234, "precision": 0.9969, "recall": 0.8226, "latency_ms": 4.45},
+      "o2m_nms": {"mAP50": 0.9974, "mAP50_95": 0.8628, "precision": 0.8220, "recall": 0.9974, "latency_ms": 4.68}
+    }
+  ],
+  "note": "Stage3 strong-neighbor is retained as a documented failure case, not as the final model. The final model uses the soft-neighbor stage."
+}

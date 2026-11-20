@@ -1,0 +1,99 @@
+{
+  "submission_id": "yolo-agent-task3-offline-v1",
+  "created_at": "2026-11-20T06:53:29.332820+00:00",
+  "fixture_status": "student_defined_offline_fixture",
+  "fixture_id": "yolo-evolution-brief-v1",
+  "notice": "Student-defined offline fixture satisfying the assignment constraints: no API, model, GPU, network access, or large dependencies.",
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6-arm64-arm-64bit",
+    "network_used": false,
+    "api_used": false,
+    "model_used": false,
+    "gpu_used": false
+  },
+  "hashes": {
+    "manifest": "9982f7ef02d04e9f6a6f2a3a24c646d14a1dd9763c1ce2afee83574404d2cf4a",
+    "agent": "0a0eed051556b5732f607c4316543c156f3556e3149c2beeb91f00429c5b8501",
+    "validator": "b0cc66be5a848ccc9ae1a56b28b70fcb8279ce912df771f412036490388a3c60",
+    "task_contract": "ee47d3d9ab844e5c163760bdecdfac49c85b4cc46d5884df3ce56b1cc916166c",
+    "tool_schema": "64b1dca7f9bf0d5a288bc9739a10fb484ead94a75cc4085093b9fa34d974e05f",
+    "rubric": "7a8b5c2e08972391d48b29c3e1a4f951791a79f0dc8e236b7df2ecb4345c742d",
+    "final_brief": "debcb12fcd75d73f07cbef4b2b63916d15e46b8f58831f17290db637c3c22f97",
+    "trajectory": "ea22dfbbd99d47b42ae3e5c279427343b5fab4956297d83ea656c668776e532c",
+    "tool_results": "5dd599d3acafbd1b051c67b4629710079881923d39ed7727b82f675cb1faa8f7",
+    "source_usage": "f7d99cd46e6ae44d641f37d7fd81ca8e4dc45721211ff3e2105442b9f51717a1",
+    "validator_result": "7c88de19bb2e68efd4df8dbe5855e637846ebe0fef1a575dbc15267208ce77d3",
+    "evaluation": "09f4401bbba344d704708294a9d207e658a0e5161ddd405c92be369ac5334f68",
+    "error_note": "8864b2b7fbddec8372cf61ec679083a288ce08d4c141ee69fa004c9e29f8940b",
+    "analysis": "3ac7d2c3913f8bca4edfb32df882c62d3f37375aa9add0fb367bf6d60408d14d"
+  },
+  "sources": {
+    "S1": {
+      "path": "fixture/source_pack/S1_yolov1.md",
+      "sha256": "51700500de7ff0f248dcda0da48bb21068bd53c47b78174083fe03622c2ec4bd"
+    },
+    "S2": {
+      "path": "fixture/source_pack/S2_yolov9.md",
+      "sha256": "6beb2504ab6f73c6661d5a017fa3d66e1211d478497457c3721d7dccf3044b16"
+    },
+    "S3": {
+      "path": "fixture/source_pack/S3_yolov10.md",
+      "sha256": "cd1fb3349ef42027dde46fcbc7e341162cf796898f3f11b012b1cc30d975aef8"
+    },
+    "S4": {
+      "path": "fixture/source_pack/S4_yolov7.md",
+      "sha256": "8bb38755006f902a7dee4ebd0a4b2334c58e24764d49e6ab7f1ebdd0d34f9f79"
+    },
+    "S5": {
+      "path": "fixture/source_pack/S5_yolo_world.md",
+      "sha256": "38583276d5b2d8721055cddfe798255280b4ceccb53346a36bac59c93a7b5ab7"
+    },
+    "S6": {
+      "path": "fixture/source_pack/S6_yolox.md",
+      "sha256": "8c63436e0c15d94f777273f8e6887774c31a04dd17ad29157a3d3add6fd2df54"
+    },
+    "S7": {
+      "path": "fixture/source_pack/S7_yolov6.md",
+      "sha256": "b790a95371723e924a302ff67eb3da2f0c06d5b8406f95846216f73adf421436"
+    }
+  },
+  "runs": {
+    "max_steps_3": {
+      "max_steps": 3,
+      "completed": false,
+      "validator_pass": false,
+      "steps_used": 3,
+      "tool_calls": 3,
+      "read_source_ids": [
+        "S3",
+        "S5"
+      ],
+      "citation_count": 0,
+      "brief_chars": 0,
+      "failure_reason": "step budget exhausted before reading three sources"
+    },
+    "max_steps_6": {
+      "max_steps": 6,
+      "completed": true,
+      "validator_pass": true,
+      "steps_used": 6,
+      "tool_calls": 6,
+      "read_source_ids": [
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "citation_count": 3,
+      "brief_chars": 1437,
+      "failure_reason": ""
+    }
+  },
+  "reproduction": {
+    "command": "python run_experiment.py",
+    "task_contract": "task-contract.json",
+    "tool_schema": "tool-schema.json",
+    "validator": "validator.py",
+    "rubric": "rubric.json"
+  }
+}

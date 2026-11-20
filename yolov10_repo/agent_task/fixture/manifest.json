@@ -1,0 +1,71 @@
+{
+  "fixture_id": "yolo-evolution-brief-v1",
+  "fixture_status": "student_defined_offline_fixture",
+  "description": "A student-defined offline source pack that satisfies the assignment constraints: no API, model, GPU, network access, or large dependencies.",
+  "required_source_ids": ["S2", "S3", "S5"],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "You Only Look Once: Unified, Real-Time Object Detection",
+      "year": 2016,
+      "venue": "CVPR",
+      "path": "fixture/source_pack/S1_yolov1.md",
+      "tags": ["yolo", "real-time", "closed-set", "single-stage", "regression"],
+      "summary": "Establishes the single-stage YOLO detection paradigm by predicting boxes and class probabilities in one network."
+    },
+    {
+      "id": "S2",
+      "title": "YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information",
+      "year": 2024,
+      "venue": "ECCV",
+      "path": "fixture/source_pack/S2_yolov9.md",
+      "tags": ["yolo", "yolov9", "gradient", "information-bottleneck", "gelan", "real-time"],
+      "summary": "Introduces Programmable Gradient Information and GELAN to address information loss in deep feature extraction."
+    },
+    {
+      "id": "S3",
+      "title": "YOLOv10: Real-Time End-to-End Object Detection",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "path": "fixture/source_pack/S3_yolov10.md",
+      "tags": ["yolo", "yolov10", "nms-free", "end-to-end", "consistent-dual-assignment", "real-time"],
+      "summary": "Trains one-to-many and one-to-one heads with consistent dual assignments and removes NMS from inference."
+    },
+    {
+      "id": "S4",
+      "title": "YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object Detectors",
+      "year": 2023,
+      "venue": "CVPR",
+      "path": "fixture/source_pack/S4_yolov7.md",
+      "tags": ["yolo", "yolov7", "bag-of-freebies", "e-elan", "real-time"],
+      "summary": "Systematizes train-time improvements and re-parameterization for real-time detection."
+    },
+    {
+      "id": "S5",
+      "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+      "year": 2024,
+      "venue": "CVPR",
+      "path": "fixture/source_pack/S5_yolo_world.md",
+      "tags": ["yolo", "open-vocabulary", "closed-set", "vision-language", "repvl-pan", "real-time"],
+      "summary": "Extends YOLO to open-vocabulary detection with RepVL-PAN and region-text contrastive learning."
+    },
+    {
+      "id": "S6",
+      "title": "YOLOX: Exceeding YOLO Series in 2021",
+      "year": 2021,
+      "venue": "arXiv technical report",
+      "path": "fixture/source_pack/S6_yolox.md",
+      "tags": ["yolo", "anchor-free", "decoupled-head", "simota", "real-time"],
+      "summary": "Switches YOLO to anchor-free detection with a decoupled head and SimOTA assignment."
+    },
+    {
+      "id": "S7",
+      "title": "YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications",
+      "year": 2022,
+      "venue": "arXiv technical report",
+      "path": "fixture/source_pack/S7_yolov6.md",
+      "tags": ["yolo", "industrial", "quantization", "deployment", "real-time"],
+      "summary": "Focuses on deployment-ready networks, quantization and hardware throughput."
+    }
+  ]
+}

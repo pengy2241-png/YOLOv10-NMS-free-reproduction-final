@@ -1,0 +1,20 @@
+{
+  "citations": {
+    "S3": {
+      "path": "fixture/source_pack/S3_yolov10.md",
+      "sha256": "cd1fb3349ef42027dde46fcbc7e341162cf796898f3f11b012b1cc30d975aef8",
+      "title": "YOLOv10: Real-Time End-to-End Object Detection"
+    },
+    "S5": {
+      "path": "fixture/source_pack/S5_yolo_world.md",
+      "sha256": "38583276d5b2d8721055cddfe798255280b4ceccb53346a36bac59c93a7b5ab7",
+      "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection"
+    },
+    "S2": {
+      "path": "fixture/source_pack/S2_yolov9.md",
+      "sha256": "6beb2504ab6f73c6661d5a017fa3d66e1211d478497457c3721d7dccf3044b16",
+      "title": "YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information"
+    }
+  },
+  "created_at": "2026-11-20T06:53:29.327963+00:00"
+}

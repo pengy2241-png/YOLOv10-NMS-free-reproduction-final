@@ -1,0 +1,22 @@
+{
+  "run_id": "max_steps_3",
+  "max_steps": 3,
+  "completed": false,
+  "validated": false,
+  "steps_used": 3,
+  "tool_calls": 3,
+  "read_source_ids": [
+    "S3",
+    "S5"
+  ],
+  "target_source_ids": [
+    "S3",
+    "S5",
+    "S2"
+  ],
+  "brief_written": false,
+  "failure_reason": "step budget exhausted before reading three sources",
+  "duration_ms": 0.733,
+  "started_at": "2026-11-20T06:53:29.324219+00:00",
+  "ended_at": "2026-11-20T06:53:29.324957+00:00"
+}
